@@ -21,8 +21,7 @@ const CreatePost = ({ open, setOpen }) => {
 	const { posts } = useSelector((store) => store.post);
 	const dispatch = useDispatch();
 
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	const fileChangeHandler = async (e) => {
 		const file = e.target.files?.[0];
 		if (file) {

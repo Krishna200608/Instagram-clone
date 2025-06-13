@@ -6,8 +6,7 @@ import { useDispatch } from "react-redux";
 
 
 const useGetUserProfile = (userId) => {
-    const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
     const dispatch = useDispatch();
     // const [userProfile, setUserProfile] = useState(null);
     useEffect(() => {

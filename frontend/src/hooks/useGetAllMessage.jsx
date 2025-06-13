@@ -6,8 +6,7 @@ import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const useGetAllMessage = () => {
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	const dispatch = useDispatch();
 	const { selectedUser } = useSelector((store) => store.auth);
 	useEffect(() => {

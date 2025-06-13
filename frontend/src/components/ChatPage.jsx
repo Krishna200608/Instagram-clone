@@ -18,7 +18,7 @@ const ChatPage = () => {
 	const { onlineUsers, messages } = useSelector((store) => store.chat);
 	const dispatch = useDispatch();
 
-	const { backendUrl } = useContext(AppContext);
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 
 	const sendMessageHandler = async (receiverId) => {
 		try {

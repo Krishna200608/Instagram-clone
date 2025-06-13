@@ -6,8 +6,7 @@ import { useDispatch } from "react-redux";
 
 
 const useGetSuggestedUsers = () => {
-    const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
     const dispatch = useDispatch();
     useEffect(() => {
         const fetchSuggestedUsers = async () => {

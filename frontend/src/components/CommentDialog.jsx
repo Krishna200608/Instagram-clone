@@ -16,8 +16,7 @@ const CommentDialog = ({ open, setOpen }) => {
 	const { selectedPost, posts } = useSelector((store) => store.post);
 	const [comment, setComment] = useState([]);
 	const dispatch = useDispatch();
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	useEffect(() => {
 		if (selectedPost) {
 			setComment(selectedPost.comments);

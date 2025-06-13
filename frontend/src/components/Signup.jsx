@@ -9,8 +9,7 @@ import { useSelector } from "react-redux";
 import { AppContext } from "@/context/AppContext";
 
 const Signup = () => {
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	const [input, setInput] = useState({
 		username: "",
 		email: "",

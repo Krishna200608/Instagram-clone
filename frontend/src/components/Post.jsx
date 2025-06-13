@@ -22,8 +22,7 @@ const Post = ({ post }) => {
 	const [comment, setComment] = useState(post.comments);
 	const dispatch = useDispatch();
 
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	const changeEventHandler = (e) => {
 		const inputText = e.target.value;
 		if (inputText.trim()) {

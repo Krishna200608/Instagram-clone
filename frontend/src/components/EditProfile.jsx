@@ -19,8 +19,7 @@ import { setAuthUser } from "@/redux/authSlice";
 import { AppContext } from "@/context/AppContext";
 
 const EditProfile = () => {
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	const imageRef = useRef();
 	const { user } = useSelector((store) => store.auth);
 	const [loading, setLoading] = useState(false);

@@ -10,8 +10,7 @@ import { setAuthUser } from '@/redux/authSlice';
 import { AppContext } from '@/context/AppContext';
 
 const Login = () => {
-    const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 
     const [input, setInput] = useState({
         email: "",

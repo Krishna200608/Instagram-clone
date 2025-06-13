@@ -21,8 +21,7 @@ import { Button } from "./ui/button";
 import { AppContext } from "@/context/AppContext";
 
 const LeftSidebar = () => {
-	const { backendUrl } = useContext(AppContext);
-
+	const backendUrl = "https://instagram-clone-5sjr.onrender.com";
 	const navigate = useNavigate();
 	const { user } = useSelector((store) => store.auth);
 	const { likeNotification } = useSelector(
