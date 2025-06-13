@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import axios from 'axios';
@@ -7,8 +7,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAuthUser } from '@/redux/authSlice';
+import { AppContext } from '@/context/AppContext';
 
 const Login = () => {
+    const { backendUrl } = useContext(AppContext);
+
+
     const [input, setInput] = useState({
         email: "",
         password: ""
@@ -26,7 +30,7 @@ const Login = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post('https://instaclone-g9h5.onrender.com/api/v1/user/login', input, {
+            const res = await axios.post( backendUrl + '/api/v1/user/login', input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
